@@ -31,9 +31,9 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative pt-24 pb-32 sm:pt-32 sm:pb-40">
+        <div className="relative pt-16 pb-24 sm:pt-24 sm:pb-32">
           <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl px-4">
               <span className="block">Experience the World</span>
               <span 
                 className="block mt-2 bg-gradient-to-r from-indigo-200 to-purple-200 bg-clip-text text-transparent"
@@ -41,44 +41,44 @@ export function HeroSection() {
                 One Adventure at a Time
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-md text-lg text-gray-100 sm:text-xl md:mt-8 md:max-w-3xl">
+            <p className="mx-auto mt-4 sm:mt-6 max-w-md text-base sm:text-lg text-gray-100 px-4 sm:px-0 md:mt-8 md:max-w-3xl">
               Embark on carefully curated journeys that blend adventure, culture, and comfort. 
               From hidden gems to iconic destinations, create memories that last a lifetime.
             </p>
 
             {/* Stats */}
-            <div className="mt-10 grid grid-cols-3 gap-8 max-w-2xl mx-auto text-white">
-              <div>
-                <div className="text-4xl font-bold">50+</div>
-                <div className="text-sm mt-1 text-gray-200">Destinations</div>
+            <div className="mt-8 sm:mt-10 grid grid-cols-3 gap-4 sm:gap-8 max-w-xs sm:max-w-2xl mx-auto text-white">
+              <div className="px-2 sm:px-4">
+                <div className="text-2xl sm:text-4xl font-bold">50+</div>
+                <div className="text-xs sm:text-sm mt-1 text-gray-200">Destinations</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold">1000+</div>
-                <div className="text-sm mt-1 text-gray-200">Happy Travelers</div>
+              <div className="px-2 sm:px-4">
+                <div className="text-2xl sm:text-4xl font-bold">1000+</div>
+                <div className="text-xs sm:text-sm mt-1 text-gray-200">Happy Travelers</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold">4.9</div>
-                <div className="text-sm mt-1 text-gray-200">Average Rating</div>
+              <div className="px-2 sm:px-4">
+                <div className="text-2xl sm:text-4xl font-bold">4.9</div>
+                <div className="text-xs sm:text-sm mt-1 text-gray-200">Average Rating</div>
               </div>
             </div>
 
-            <div className="mx-auto mt-12 max-w-lg space-y-4">
+            <div className="mx-auto mt-8 sm:mt-12 max-w-lg px-4 sm:px-0 space-y-3 sm:space-y-4">
               <div className="relative">
                 <input
                   type="text"
                   value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                  className="block w-full rounded-full border-2 border-white/20 bg-white/10 px-6 py-4 pl-12 text-lg text-white backdrop-blur-sm transition-all duration-300 placeholder:text-gray-300 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 sm:text-base"
+                  className="block w-full rounded-full border-2 border-white/20 bg-white/10 px-4 sm:px-6 py-3 sm:py-4 pl-10 sm:pl-12 text-base sm:text-lg text-white backdrop-blur-sm transition-all duration-300 placeholder:text-gray-300 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
                   placeholder="Where do you want to go?"
                 />
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
                   <MagnifyingGlassIcon className="h-5 w-5 text-gray-300" aria-hidden="true" />
                 </div>
               </div>
               <button 
                 onClick={handleSearch}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition-all duration-200"
+                className="w-full inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-200"
               >
                 Start Your Journey
               </button>
